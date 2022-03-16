@@ -32,3 +32,8 @@ $(document).ready(function() {
   });
 });
 
+$('.lineUpBtn').on('click', function(event) {
+  window.dancers.forEach(function(dancer) {
+    dancer.lineUp();
+  });
+});

@@ -28,3 +28,11 @@ makeBlinkyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
 };
+
+makeBlinkyDancer.prototype.lineUp = function() {
+
+  this.$node.animate({
+    'left': '10%'
+  });
+};
+

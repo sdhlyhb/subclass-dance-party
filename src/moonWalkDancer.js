@@ -12,3 +12,10 @@ makeMoonWalkDancer.prototype.step = function() {
     $( '.moonWalkDancer' ).animate({ 'left': '-=100px' }, 'slow' );
   });
 };
+
+makeMoonWalkDancer.prototype.lineUp = function() {
+
+  this.$node.css({
+    'top': '10%'
+  });
+};

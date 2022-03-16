@@ -16,3 +16,10 @@ makeSnakeDancer.prototype.step = function() {
   $('.snakeDancer').animate({ 'left': '+=100px' }, 'slow' );
   $('.snakeDancer').animate({ 'top': '+=100px' }, 'slow' );
 };
+
+makeSnakeDancer.prototype.lineUp = function() {
+
+  this.$node.css({
+    'top': '90%'
+  });
+};
