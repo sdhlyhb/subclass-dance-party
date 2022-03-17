@@ -51,3 +51,11 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.talk = function() {
+  $('.dancer').html('Hello');
+
+  setTimeout(function() {
+    $('.dancer').html('');
+  }, 3000);
+};

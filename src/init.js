@@ -29,6 +29,11 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
+    var oldDancers = window.dancers.slice(0, -1);
+    oldDancers.forEach(function(dancer) {
+      dancer.talk();
+    });
   });
 });
 
