@@ -38,6 +38,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
+  this.changeColor();
 };
 
 makeDancer.prototype.step = function () {
@@ -59,3 +60,14 @@ makeDancer.prototype.talk = function() {
     $('.dancer').html('');
   }, 3000);
 };
+
+makeDancer.prototype.changeColor = function() {
+  $('.dancer').mouseover(function(event) {
+    event.target.innerHTML = 'Get Off!';
+
+    setTimeout(function() {
+      event.target.innerHTML = '';
+    }, 3000);
+  });
+};
+
