@@ -38,7 +38,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
-  this.changeColor();
+
 };
 
 makeDancer.prototype.step = function () {
@@ -53,21 +53,26 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.talk = function() {
-  $('.dancer').html('Hello');
+makeDancer.prototype.welcome = function() {
+  this.$node.html('welcome!');
+  this.$node.css({'color': 'yellow'});
 
   setTimeout(function() {
     $('.dancer').html('');
   }, 3000);
 };
 
-makeDancer.prototype.changeColor = function() {
-  $('.dancer').mouseover(function(event) {
-    event.target.innerHTML = 'Get Off!';
+makeDancer.prototype.greet = function() {
+  this.$node.html('Hello!');
+  this.$node.css({'color': 'red'});
 
-    setTimeout(function() {
-      event.target.innerHTML = '';
-    }, 3000);
-  });
+  setTimeout(function() {
+    $('.dancer').html('');
+  }, 3000);
 };
 
+makeDancer.prototype.lineBreak = function() {
+  var randomTop = $('body').height() * Math.random();
+  var randomLeft = $('body').width() * Math.random();
+  this.$node.css( {'top': randomTop, 'left': randomLeft});
+};

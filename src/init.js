@@ -23,22 +23,34 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    dancer.emojiFace();
+    // the added new dancer will say hello;
+    dancer.greet();
+
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
-
-    var oldDancers = window.dancers.slice(0, -1);
+    var currentLen = window.dancers.length;
+    //when new dancer is added all the old dancers will say welcome
+    var oldDancers = window.dancers.slice(0, currentLen - 1);
     oldDancers.forEach(function(dancer) {
-      dancer.talk();
+      dancer.welcome();
     });
+  });
+
+});
+
+$('.lineUpBtn').on('click', function() {
+  window.dancers.forEach(function(dancer) {
+    dancer.lineUp();
   });
 });
 
-$('.lineUpBtn').on('click', function(event) {
+$('.lineBreakBtn').on('click', function() {
   window.dancers.forEach(function(dancer) {
-    dancer.lineUp();
+    dancer.lineBreak();
   });
 });

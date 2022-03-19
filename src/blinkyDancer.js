@@ -20,6 +20,7 @@
 
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinkyDancer');
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -36,5 +37,20 @@ makeBlinkyDancer.prototype.lineUp = function() {
   });
 };
 
+// makeBlinkyDancer.prototype.emojiFace = function() {
+//   this.$node.hover(function() {
+//     $(this).append( $( '<span > <img class="manImg" src="emojiImg/smiley.png"></img> </span>' ) );
+//   }, function() {
+//     $( this ).find( 'span' ).remove();
+//   });
+// };
 
+makeBlinkyDancer.prototype.emojiFace = function() {
+  this.$node.mouseover(function() {
+    $(this).append( $( '<span > <img class="emoji" src="emojiImg/smiley.png"></img> </span>' ) );
+  });
+  this.$node.mouseout(function() {
+    $(this).find('span').remove();
+  });
+};
 
