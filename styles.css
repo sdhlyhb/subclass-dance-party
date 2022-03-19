@@ -6,7 +6,8 @@ body{
   padding: 0px;
   border: 0px;
   background: url('stars.jpg');
-  font-size: 18px;
+  font-size: 20px;
+
 }
 body, a:link, a:visited, a:active{
   color: white;
@@ -17,7 +18,15 @@ body, a:link, a:visited, a:active{
 }
 
 .lineUpBtn {
-  padding:5px 12px;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+.lineBreakBtn {
+  position: absolute;
+  top: 1%;
+  left: 5%;
 }
 /* .topbar{
   height:32px;
@@ -53,4 +62,23 @@ body, a:link, a:visited, a:active{
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	border-bottom: 50px solid cyan;
+<<<<<<< HEAD
 }
+=======
+}
+
+.music{
+  display: flex;
+  position: relative;
+  margin: 0, auto;
+  left: 15%;
+  width: 20%;
+}
+
+audio {
+  width: 50%;
+  height: 30px;
+
+
+}
+>>>>>>> 05eff23de351792cabf7b330e55888e10ce2b756
