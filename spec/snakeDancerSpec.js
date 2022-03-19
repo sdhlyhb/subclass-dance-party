@@ -1,5 +1,5 @@
 describe('snakeDancer', function() {
-
+  // unit test
   var snakeDancer, clock;
   var timeBetweenSteps = 100;
 
