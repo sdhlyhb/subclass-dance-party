@@ -18,6 +18,7 @@ makeMoonWalkDancer.prototype.step = function() {
 
 makeMoonWalkDancer.prototype.lineUp = function() {
 
+  this.$node.finish();
   this.$node.css({
     'top': '10%'
   });

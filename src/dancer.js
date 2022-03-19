@@ -72,6 +72,7 @@ makeDancer.prototype.greet = function() {
 };
 
 makeDancer.prototype.lineBreak = function() {
+
   var randomTop = $('body').height() * Math.random();
   var randomLeft = $('body').width() * Math.random();
   this.$node.css( {'top': randomTop, 'left': randomLeft});
