@@ -27,21 +27,30 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  /* border:20px solid green; */
+  border-radius:10px;
+  position:absolute;
+  font-size: 25px;
+  color: yellow;
+}
+
+.blinkyDancer{
+
   border:20px solid green;
   border-radius:10px;
   position:absolute;
 }
 
 .moonWalkDancer{
-  border:30px solid greenyellow;
-  border-radius:30px;
+  border:20px solid greenyellow;
+  border-radius:20px;
   position:absolute;
 }
 
 .snakeDancer{
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid white;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid cyan;
 }

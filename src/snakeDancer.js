@@ -18,7 +18,7 @@ makeSnakeDancer.prototype.step = function() {
 };
 
 makeSnakeDancer.prototype.lineUp = function() {
-
+  this.$node.finish();
   this.$node.css({
     'top': '90%'
   });
